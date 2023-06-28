@@ -1,0 +1,249 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+html, body {
+    height: 90%;
+    overflow-y: hidden;
+}
+
+
+:root {
+    --background: #27374D;
+    --font: #2D4356;
+    --primary: #9DB2BF;
+    --secondary: #DDE6ED;
+
+    --aik: #213555;
+    --do: #4F709C;
+    --teen: #D8C4B6;
+    --char: #F5EFE7;
+}
+
+body {
+    background-color: var(--aik);
+    /* background-image: url("https://static.colourlovers.com/images/patterns/1462/1462099.png"); */
+    /* background-image: url("https://static.colourlovers.com/images/patterns/582/582552.png"); */
+    /* background-image: url("https://static.colourlovers.com/images/patterns/6001/6001205.png"); */
+    background-image: url("https://deepfriedmemes.com/images/noise.png");
+    padding-bottom: 200px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--do);
+}
+
+tr:nth-child(even) {
+    background-color: var(--teen);
+}
+
+th {
+    color: var(--char);
+}
+
+a {
+    text-decoration: none;
+    color: var(--background);
+}
+
+h1 {
+    user-select: none;
+    color: var(--char);
+}
+
+#processing {
+    width: 200px;
+    margin-left: 41%;
+
+    color: var(--char);
+
+    position: absolute;
+    top: 45%;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.form_wrapper {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+h1.main_logo {
+    user-select: none;
+    margin-bottom: 100px;
+}
+
+form.search_form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+input#search_bar_s {
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+input#search_bar {
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.submit_search {
+    text-transform: uppercase;
+    color: var(--char);
+    font-size: 13px;
+    border: none;
+    width: 100px;
+    border-radius: 20px;
+    background-color: var(--do);
+    text-align: center;
+}
+
+.return_to_home {
+    display: none;
+    width: 200px;
+    justify-self: end;
+    margin: 20px 0 200px auto;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    border: 2px solid var(--char);
+    color: var(--char);
+    transition: 0.1s;
+}
+
+span.credits {
+    user-select: none;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 500px;
+    color: var(--teen);
+}
+
+.return_to_home:hover {
+    background-color: var(--char);
+    color: var(--aik);
+    border: 2px solid var(--char);
+    border-radius: 10px;
+}
+
+#loading-bar-spinner.spinner {
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 400ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+    width: 40px;
+    height: 40px;
+    border:  solid 4px transparent;
+    border-top-color: var(--teen) !important;
+    border-left-color: var(--teen) !important;
+    border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.error_heading {
+    width: 50%;
+    text-align: center;
+    margin: 200px auto 10px auto;
+    color: red;
+}
+
+@media screen and (max-width: 500px)  {
+
+    body, html {
+        height: 90%;
+    }
+
+    body {
+        padding-bottom: 150px;
+        overflow-y: scroll;
+    }
+
+    #home {
+        height: 80%;
+    }
+
+    input#search_bar_s, input#search_bar {
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .submit_search {
+        border-radius: 10px;
+        width: 70px;
+    }
+
+    input#search_bar_s {
+        width: 70px;
+    }
+
+    #processing {
+        display: flex;
+        width: 200px;
+        margin: 50px auto 50px auto;
+        justify-content: center;
+        font-size: 20px;
+
+        color: var(--char);
+
+        position: static;
+        text-align: center;
+    }
+
+    h1.main_logo {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .form_wrapper {
+        flex-direction: column;
+        height: 70%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+
+    span.credits {
+        font-size: 12px;
+    }
+    
+}

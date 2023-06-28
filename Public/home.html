@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title></title>
+</head>
+<body id="home">
+
+    <div class="form_wrapper">
+        <h1 class="main_logo">Scrape the website</h1>
+        <form action="/waltuh" method="post" name="search" class="search_form">
+            <input type="text" name="show" id="search_bar" placeholder="Enter a TV show name">
+            <input type="number" name="season" id="search_bar_s" placeholder="Season">
+            <input type="submit" value="Submit" class="submit_search">
+        </form>
+        <span class="credits">Made by TheAM</span>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+    <script>
+        const socket = io();
+    </script>
+</body>
+</html>

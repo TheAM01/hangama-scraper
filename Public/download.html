@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title></title>
+</head>
+<body id="body">
+
+    <div id="processing"></div>
+
+    <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+
+    <h1 id="title"></h1>
+
+    <table id="downloads_table">
+    </table>
+
+    <a href="/" id="return_button" class="return_to_home">Return to search</a>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+    <script>
+        const socket = io();
+        getEpisodes(socket);
+        processingAnimation()
+    </script>
+</body>
+</html>
